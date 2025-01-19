@@ -1,0 +1,24 @@
+\renewcommand{\arraystretch}{1.5}
+\begin{table}
+\centering
+\caption{RMSE values (Eq. \ref{eq:RMSE}) after Monte Carlo cross-validations (10$^{4}$ permutations) for different models and different data subsets.}
+\label{tab:RMSE_CV}
+\begin{tabular}{l|l|c} 
+\toprule
+Data                                                                             & Model                                                    & RMSE    \\ 
+\midrule
+\multirow{5}{*}{\begin{tabular}[c]{@{}l@{}}Original\\data\\set \end{tabular}}    & One-part model                                            & 0.4165  \\
+                                                                                 & Two-part model: 0 vs not 0 m s$^{-1}$     & 0.4073  \\
+                                                                                 & Selection model: 0 vs not 0 m s$^{-1}$                    & 0.4132  \\
+                                                                                 & Three-part model: 0 vs 0 vs 0 m s$^{-1}$                  & 0.4055  \\
+                                                                                 & Conditional inference random forests                      & 0.3941  \\ 
+\hline
+\multirow{5}{*}{\begin{tabular}[c]{@{}l@{}}No\\upstream\\movement \end{tabular}} & \begin{tabular}[c]{@{}l@{}}One-part model\\ \end{tabular} & 0.4051  \\
+                                                                                 & Two-part model: 0 vs not 0 m s$^{-1}$                         & 0.3804  \\
+                                                                                 & Selection model: 0 vs not 0 m s$^{-1}$                        & 0.5410  \\
+                                                                                 & Three-part model: 0 vs 0-0.45 vs 0.45-2.7 m s$^{-1}$      & 0.3653  \\
+                                                                                 & Conditional inference random forests                      & 0.3669  \\
+\bottomrule
+\end{tabular}
+\end{table}
+\renewcommand{\arraystretch}{1}
